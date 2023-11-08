@@ -1,0 +1,33 @@
+<!-- CONTENEDOR -->
+<mat-drawer-container class="example-container" autosize>
+  <!-- SIDEBAR -->
+  <mat-drawer
+    style="width: 200px; background-color: #A4D955;"
+    [opened]="showSidebar"
+    #drawer
+    class="example-sidenav"
+    mode="side"
+    position="start"
+  >
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <!-- SIDEBAR -->
+
+  <!-- CONTENIDO -->
+  <div class="example-sidenav-content" style="background-image:url(../../assets/img/travel.jpg);">
+    <!-- TOOLBAR -->
+    <app-toolbar (toggleSidebar)="showSidebar = !showSidebar"></app-toolbar>
+
+    <!-- <app-icons></app-icons> -->
+    <main style="padding: 1rem">
+      <!-- PAGINA -->
+      <!-- <app-forms></app-forms> -->
+      <!-- <app-users></app-users> -->
+      <router-outlet></router-outlet>
+
+      <!-- <button (click)="showHome = !showHome">Mostrar home</button> -->
+      <!-- <app-home *ngIf="showHome"></app-home> -->
+    </main>
+  </div>
+  <!-- CONTENIDO -->
+</mat-drawer-container>

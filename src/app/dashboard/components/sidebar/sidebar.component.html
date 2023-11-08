@@ -1,0 +1,40 @@
+<div >
+  <h3>
+    {{ fullName$ | async | uppercase }}
+    <br />
+    {{ email$ | async }}
+  </h3>
+</div>
+
+<mat-nav-list>
+  <!-- /dashboard me llevara a /dashboard/home -->
+  <mat-list-item routerLink="home">
+    <a>Home</a>
+  </mat-list-item>
+
+  <mat-list-item
+    routerLink="users"
+    routerLinkActive
+    #usuariosLink="routerLinkActive"
+    [activated]="usuariosLink.isActive"
+  >
+    <a>Usuarios</a>
+  </mat-list-item>
+  <mat-list-item
+    routerLink="courses"
+    routerLinkActive
+    #cursosLink="routerLinkActive"
+    [activated]="cursosLink.isActive"
+  >
+    <a>Cursos</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a>Alumnos</a>
+  </mat-list-item>
+  <mat-list-item>
+    <a>Inscripciones</a>
+  </mat-list-item>
+  <mat-list-item (click)="logout()">
+    <a>Cerrar sesión</a>
+  </mat-list-item>
+</mat-nav-list>

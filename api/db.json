@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "mimail@mail.com",
+      "lastName": "MiApellido",
+      "name": "MiNombre",
+      "role": "ADMIN",
+      "token": "YaSeQueDeberiaSerAleatorioYMasLargo",
+      "password": "admin"
+    }
+  ]
+}
